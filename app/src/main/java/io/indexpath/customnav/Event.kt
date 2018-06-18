@@ -17,13 +17,13 @@ private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [ds.OnFragmentInteractionListener] interface
+ * [Event.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [ds.newInstance] factory method to
+ * Use the [Event.newInstance] factory method to
  * create an instance of this fragment.
  *
  */
-class ds : Fragment() {
+class Event : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -40,7 +40,7 @@ class ds : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ds, container, false)
+        return inflater.inflate(R.layout.fragment_event, container, false)
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -50,11 +50,7 @@ class ds : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-//        if (context is OnFragmentInteractionListener) {
-//            listener = context
-//        } else {
-//            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
-//        }
+
     }
 
     override fun onDetach() {
@@ -85,12 +81,12 @@ class ds : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment ds.
+         * @return A new instance of fragment Event.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-                ds().apply {
+                Event().apply {
                     arguments = Bundle().apply {
                         putString(ARG_PARAM1, param1)
                         putString(ARG_PARAM2, param2)

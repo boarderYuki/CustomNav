@@ -37,15 +37,13 @@ class MainActivity : AppCompatActivity() {
 
     fun selectItemDrawer(menuItem: MenuItem) {
         var myFragment: Fragment? = null
-        //val framentC :
         val fragmentClass: Class<*>
         when (menuItem.itemId) {
-            R.id.db -> fragmentClass = ds::class.java
-//            R.id.db -> fragmentClass = Dashboard::class.java
-//            R.id.event -> fragmentClass = Event::class.java
-//            R.id.search -> fragmentClass = Search::class.java
-//            R.id.settings -> fragmentClass = Setting::class.java
-            else -> fragmentClass = ds::class.java
+            R.id.db -> fragmentClass = Dashboard::class.java
+            R.id.event -> fragmentClass = Event::class.java
+            R.id.search -> fragmentClass = Search::class.java
+            R.id.settings -> fragmentClass = Setting::class.java
+            else -> fragmentClass = Dashboard::class.java
         }
         try {
             myFragment = fragmentClass.newInstance() as Fragment
