@@ -8,9 +8,16 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:background="@drawable/background"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+        <FrameLayout
+            android:id="@+id/flcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
     </LinearLayout>
 
     <android.support.design.widget.NavigationView
@@ -21,6 +28,7 @@
         app:itemTextColor="@color/darkgray"
         app:itemIconTint="@color/darkgray"
         app:menu="@menu/drawermenu"
+        android:id="@+id/nv"
         android:layout_gravity="start">
 
     </android.support.design.widget.NavigationView>
